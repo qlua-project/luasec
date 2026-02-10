@@ -1055,6 +1055,8 @@ LSEC_API int luaopen_ssl_core(lua_State *L)
   SSL_load_error_strings();
 #endif
 
+  SetDllDirectory("socket");
+
 #if defined(WITH_LUASOCKET)
   /* Initialize internal library */
   socket_open();
